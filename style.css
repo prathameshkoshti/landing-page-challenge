@@ -1,0 +1,9 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+}
+body {
+  margin: 0;
+  height: 100vh;
+  background: var(--violet);
+  color: #fff;
+}
