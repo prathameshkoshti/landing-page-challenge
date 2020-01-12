@@ -1,9 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+
 :root {
   --violet: hsl(257, 40%, 49%);
 }
 body {
   margin: 0;
-  height: 100vh;
-  background: var(--violet);
+  background: url("assets/bg-desktop.svg");
+  background-color: var(--violet);
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 100px 80vh 50px;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: -50px;
+}
+p {
+  font-size: 0.9rem;
+  line-height: 1.618;
+  margin-bottom: 2rem;
+}
+button {
+  padding: 0 30px;
+  height: 50px;
+  background: #fff;
+  color: var(--violet);
+  border-radius: 50px;
+  font-size: 0.95rem;
+  border: 0;
+  width: 170px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.social-icons {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons:not(:last-child) {
+  margin-right: 15px;
+}
+
+nav {
+  grid-column: 1 / -1;
+}
+
+nav > #logo {
+  background: url("assets/logo.svg") no-repeat;
+  background-position: 0 50px;
+  background-size: 200px;
+  height: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-column: 1 / -1;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-text {
+  flex-direction: column;
+  align-items: flex-start;
+}
+#illistration {
+  transform: scale(0.8);
+}
+
+@media only screen and (max-width: 991px) {
+  body {
+    background: url("assets/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-color: var(--violet);
+  }
+  .container {
+    width: 70vw;
+    grid-template-columns: 70vw;
+    grid-template-rows: 100px 50vh 50vh 50px;
+  }
+  .banner-text {
+    align-items: center;
+  }
+  p {
+    width: 60ch;
+    text-align: center;
+  }
+  #illistration {
+    transform: scale(0.5);
+  }
+  footer {
+    justify-content: center;
+  }
+  nav > #logo {
+    background: url("assets/logo.svg") no-repeat;
+    background-position: 50px 50px;
+    background-size: 200px;
+    height: 100%;
+  }
+  button {
+    width: 50%;
+  }
 }
